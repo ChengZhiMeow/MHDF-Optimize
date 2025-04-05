@@ -1,0 +1,32 @@
+prefix: "&e[梦之优化]&r"
+only-player: "{prefix} &c这个命令只能玩家执行!"
+
+commands:
+  mhdfoptimize:
+    sub-commands:
+      help:
+        usage: "/{command} help"
+        description: "命令帮助"
+        commandFormat: "&e{usage} &7| &b{description}"
+        message: |-
+          &e-------------=&6梦之优化&6=&e-------------
+          {helpList}
+          &e-------------=&6梦之优化&6=&e-------------
+      clean:
+        usage: "/{command} clean"
+        description: "清理世界实体"
+      about:
+        usage: "/{command} about"
+        description: "插件信息"
+        message: |-
+          &e-------------=&6梦之优化&6=&e-------------
+          &f插件版本: &6{version}
+          &e-------------=&6梦之优化&6=&e-------------
+      reload:
+        usage: "/{command} reload"
+        description: "重载插件"
+        message: "{prefix} &6插件重载完成!"
+  trash:
+    usage: "/{command}"
+    description: "打开垃圾桶"
+    message: "{prefix} &6你打开了垃圾桶!"

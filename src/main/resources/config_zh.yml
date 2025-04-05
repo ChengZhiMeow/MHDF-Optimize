@@ -1,0 +1,193 @@
+# 掉落物堆叠
+drop-stack:
+  # 开关
+  enable: true
+  # 最大堆叠数
+  max-stack: 1024
+  # 范围
+  range: 5.0
+  # 悬浮字
+  hologram:
+    # 开关
+    enable: true
+    # 格式
+    format: "&f{name} &bx{amount}"
+
+# 实体AI
+entity-AI:
+  # 关闭自然生成实体的AI
+  disable-natural: true
+  # 关闭刷怪笼生成实体的AI
+  disable-spawner: true
+  # 关闭指定实体类型的AI
+  # 实体类型见 https://bukkit.windit.net/javadoc/org/bukkit/entity/package-summary.html
+  disable-entity-list:
+    - "BAT"
+
+# 实体生成
+entity-spawn:
+  # 关闭指定实体类型的生成
+  # 实体类型见 https://bukkit.windit.net/javadoc/org/bukkit/entity/package-summary.html
+  disable-entity-list:
+    - "BAT"
+  # 调整刷怪概率
+  change-spawn-chance:
+    # 刷怪实体
+    spawn-entity:
+      # <实体类型>: <生成概率>
+      # 生成原因见 https://bukkit.windit.net/javadoc/org/bukkit/entity/package-summary.html
+      # 末影人
+      ENDERMAN: 0.5
+    # 刷怪原因
+    spawn-reason:
+      # <生成原因>: <生成概率>
+      # 生成原因见 https://bukkit.windit.net/javadoc/org/bukkit/event/entity/CreatureSpawnEvent.SpawnReason.html
+      # 刷怪笼
+      SPAWNER: 0.5
+      # 地狱门生成僵尸猪人
+      NETHER_PORTAL: 0.4
+      # 村民生成铁傀儡
+      VILLAGE_DEFENSE: 0.3
+
+# 扫地娘
+world-clean:
+  # 开关
+  enable: true
+  # 扫地娘间隔(单位:秒)
+  delay: 60
+  # 消息类型
+  # message   ——聊天栏消息
+  # actionBar ——操作栏消息
+  # bossbar   ——boss血条
+  message-type: "message"
+  # boss血条
+  bossbar:
+    # 在倒计时多久的时候显示
+    time: 30
+    # 显示保留时间(单位: Tick)
+    showTime: 60
+    # 格式
+    format: "&a地上的掉落物将在 &e{time}秒 &a后清除！"
+    # 颜色
+    color: "WHITE"
+    # 样式
+    style: "PROGRESS"
+  # 消息
+  message:
+    # 完成清理的消息
+    finish: "&a嗯哼,这次成功清理了 &c{cleanEntity}个 &a怪叔叔 &a和 &c{cleanItem}个 &a垃圾,我感觉自己萌萌哒~"
+    # 还有30秒清理的消息
+    30: "&a地上的掉落物将在 &e30秒 &a后清除！"
+    # 还有10秒清理的消息
+    10: "&a地上的掉落物将在 &e10秒 &a后清除！"
+    # 还有3秒清理的消息
+    3: "&a地上的掉落物将在 &e3秒 &a后清除！"
+    # 还有2秒清理的消息
+    2: "&a地上的掉落物将在 &e2秒 &a后清除！"
+    # 还有1秒清理的消息
+    1: "&a地上的掉落物将在 &e1秒 &a后清除！"
+  # 音效
+  sound:
+    # 完成清理的音效
+    finish: "ENTITY_EXPERIENCE_ORB_PICKUP|25|1.0"
+    # 还有10秒清理的消息
+    10: "ENTITY_EXPERIENCE_ORB_PICKUP|25|0.6"
+    # 还有3秒清理的消息
+    3: "ENTITY_EXPERIENCE_ORB_PICKUP|25|0.7"
+    # 还有2秒清理的消息
+    2: "ENTITY_EXPERIENCE_ORB_PICKUP|25|0.8"
+    # 还有1秒清理的消息
+    1: "ENTITY_EXPERIENCE_ORB_PICKUP|25|0.9"
+  # 激活扫地娘的世界
+  world:
+    - world
+    - world_nether
+    - world_the_end
+  # 清理实体
+  entity:
+    # 开关
+    enable: true
+    # 过滤器
+    filter:
+      # 动物
+      animal: false
+      # 怪物
+      monster: false
+      # 村民
+      villager: true
+      # BOSS实体
+      boss: false
+      # 命名过的实体
+      name: true
+      # 被拴住的实体
+      lead: false
+      # 盔甲架
+      armor-stand: true
+    # 列表黑名单模式
+    black-list: false
+    # 清理列表,作用取决于上方开关
+    # 实体类型见 https://bukkit.windit.net/javadoc/org/bukkit/entity/package-summary.html
+    list:
+      - PIG
+  # 清扫物品
+  item:
+    # 开关
+    enable: true
+    # 过滤器
+    filter:
+      # 有命名的物品
+      name: true
+      # 有lore的物品
+      lore: true
+      # 有附魔的物品
+      enchant: false
+      # 有customModelData的物品
+      custom-model-data: true
+      # 有内容的书
+      written-book: true
+    # 列表黑名单模式
+    black-list: false
+    # 清理列表,作用取决于上方开关
+    # 物品类型见 https://bukkit.windit.net/javadoc/org/bukkit/Material.html
+    list:
+      - APPLE
+
+# 鞘翅
+elytra:
+  # 烟花火箭冷却(-1关闭)
+  firework-cooldown: 60
+
+# 掉落方块的处理
+falling-block:
+  enable: true
+  # 当在一定范围内有多少掉落的方块实体时才会开始清理
+  count: 64
+  # 范围
+  radius:
+    x: 10
+    # 这个在低版本可以设置为255，按你的服务器的版本或者实际情况进行设置
+    y: 500
+    z: 10
+
+# 实验性的
+# 此功能还未被测试，请谨慎开启
+villager-ai-improve:
+  enable: false
+  # 在玩家多少范围内村民AI会被开启反之是关闭
+  radius:
+    # 这代表是范围12格, -1代表那个部分不检测
+    x: 12
+    y: 12
+    z: 12
+
+# 禁用项目
+disable:
+  # 禁用村民交易
+  villager-trade: false
+  # 禁用非玩家实体通过传送门
+  entity-enter-portal: false
+  # 禁用蘑菇在非主世界地方的生长
+  mushroom-grow: false
+  # 禁用蘑菇在非主世界地方的放置
+  mushroom-place: false
+

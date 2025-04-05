@@ -1,0 +1,22 @@
+name: MHDF-Optimize
+version: '${project.version}'
+main: cn.chengzhiya.mhdfoptimize.Main
+api-version: '1.20'
+load: POSTWORLD
+folia-supported: true
+commands:
+  mhdfoptimize:
+    description: "主命令"
+    permission: optimize.mhdfoptimize
+  trash:
+    description: "垃圾桶"
+    permission: optimize.trash
+permissions:
+  optimize.mhdfoptimize:
+    description: 管理命令权限
+    default: op
+  optimize.trash:
+    description: 垃圾桶权限
+    default: op
+  optimize.bypass.build:
+    default: op
