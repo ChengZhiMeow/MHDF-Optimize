@@ -92,15 +92,15 @@ public final class LangUtil {
     public static @NotNull TextComponent getHelpList(String commandKey) {
         TextComponentBuilder textComponentBuilder = new TextComponentBuilder();
 
-        List<String> keys = new ArrayList<>(LangUtil.getKeys("commands." + commandKey + ".subCommands"));
+        List<String> keys = new ArrayList<>(LangUtil.getKeys("commands." + commandKey + ".sub-commands"));
         for (String key : keys) {
             textComponentBuilder.append(
-                    LangUtil.i18n("commands." + commandKey + ".subCommands.help.commandFormat")
+                    LangUtil.i18n("commands." + commandKey + ".sub-commands.help.commandFormat")
                             .replace("{usage}",
-                                    LangUtil.i18n("commands." + commandKey + ".subCommands." + key + ".usage")
+                                    LangUtil.i18n("commands." + commandKey + ".sub-commands." + key + ".usage")
                             )
                             .replace("{description}",
-                                    LangUtil.i18n("commands." + commandKey + ".subCommands." + key + ".description")
+                                    LangUtil.i18n("commands." + commandKey + ".sub-commands." + key + ".description")
                             )
             );
             if (!key.equals(keys.get(keys.size() - 1))) {
