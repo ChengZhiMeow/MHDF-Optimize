@@ -21,7 +21,7 @@ public final class CleanWorld extends MHDFRunnable {
             }
 
             int time = delay - i;
-            int showTime = ConfigUtil.getConfig().getInt("world-clean.bossbar.showTime");
+            int showTime = ConfigUtil.getConfig().getInt("world-clean.bossbar.show-time");
             if (type.equals("bossbar")) {
                 String message = ConfigUtil.getConfig().getString("world-clean.bossbar.format");
                 if (message == null) {

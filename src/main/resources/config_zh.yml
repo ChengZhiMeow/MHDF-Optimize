@@ -65,7 +65,7 @@ world-clean:
     # 在倒计时多久的时候显示
     time: 30
     # 显示保留时间(单位: Tick)
-    showTime: 60
+    show-time: 60
     # 格式
     format: "&a地上的掉落物将在 &e{time}秒 &a后清除！"
     # 颜色

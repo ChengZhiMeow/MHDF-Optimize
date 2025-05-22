@@ -57,7 +57,7 @@ public final class DropStackUtil {
         ItemStack itemStack = item.getItemStack();
         ItemStack nearbyItemStack = nearbyItem.getItemStack();
 
-        int maxStack = ConfigUtil.getConfig().getInt("drop-stack.maxStack");
+        int maxStack = ConfigUtil.getConfig().getInt("drop-stack.max-stack");
         int combinedAmount = itemStack.getAmount() + nearbyItemStack.getAmount();
 
         if (maxStack > 0 && combinedAmount <= maxStack) {
@@ -89,7 +89,7 @@ public final class DropStackUtil {
             if (nearbyItem.getPickupDelay() > 1000) continue;
             if (!nearbyItemStack.isSimilar(itemStack)) continue;
 
-            int maxStack = ConfigUtil.getConfig().getInt("drop-stack.maxStack");
+            int maxStack = ConfigUtil.getConfig().getInt("drop-stack.max-stack");
             int combinedAmount = itemStack.getAmount() + nearbyItemStack.getAmount();
             if (combinedAmount >= maxStack) continue;
 
