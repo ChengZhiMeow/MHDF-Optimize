@@ -5,7 +5,7 @@
 
     <groupId>cn.chengzhiya</groupId>
     <artifactId>MHDF-Optimize</artifactId>
-    <version>2.1.0</version>
+    <version>2.1.1</version>
     <packaging>jar</packaging>
 
     <properties>
@@ -14,7 +14,7 @@
     </properties>
 
     <build>
-        <finalName>[梦之优化]${parent.artifactId}-${project.version}</finalName>
+        <finalName>[梦之优化]MHDF-Optimize-${project.version}</finalName>
 
         <plugins>
             <plugin>
@@ -62,6 +62,10 @@
                                 <relocation>
                                     <pattern>org.jetbrains</pattern>
                                     <shadedPattern>cn.chengzhiya.mhdfoptimize.libs.jetbrains</shadedPattern>
+                                </relocation>
+                                <relocation>
+                                    <pattern>org.jspecify</pattern>
+                                    <shadedPattern>cn.chengzhiya.mhdfoptimize.libs.jspecify</shadedPattern>
                                 </relocation>
                                 <relocation>
                                     <pattern>de.tr7zw.changeme.nbtapi</pattern>
@@ -133,6 +137,8 @@
             <name>橙汁喵の仓库</name>
             <url>https://maven.chengzhimeow.cn/releases</url>
         </repository>
+        <repository><id>minimessage</id><url>https://mvnrepository.com/artifact/net.kyori/adventure-text-minimessage</url></repository>
+        <repository><id>awa</id><url>https://mvnrepository.com/artifact/com.google.guava/guava</url></repository>
     </repositories>
 
     <dependencies>
@@ -170,11 +176,18 @@
         </dependency>
 
         <dependency>
+            <groupId>net.kyori</groupId>
+            <artifactId>adventure-text-minimessage</artifactId>
+            <version>4.21.0</version>
+        </dependency>
+
+        <dependency>
             <groupId>me.clip</groupId>
             <artifactId>placeholderapi</artifactId>
             <version>2.11.6</version>
             <scope>provided</scope>
         </dependency>
+
         <dependency>
             <groupId>io.lumine</groupId>
             <artifactId>Mythic-Dist</artifactId>
@@ -203,7 +216,13 @@
         <dependency>
             <groupId>cn.chengzhiya</groupId>
             <artifactId>MHDF-LangUtil</artifactId>
-            <version>1.1.0</version>
+            <version>1.2.5</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>33.4.8-jre</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>

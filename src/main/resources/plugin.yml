@@ -4,6 +4,10 @@ main: cn.chengzhiya.mhdfoptimize.Main
 api-version: '1.20'
 load: POSTWORLD
 folia-supported: true
+authors:
+  - Dg32z_
+  - Avalbane_
+  - ChengZhiYa
 commands:
   mhdfoptimize:
     description: "主命令"
