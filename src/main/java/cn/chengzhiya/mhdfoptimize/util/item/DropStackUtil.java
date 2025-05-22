@@ -20,10 +20,10 @@ public final class DropStackUtil {
      * @param item 当前物品
      */
     public static void displayItemHologram(Item item) {
-        if (!ConfigUtil.getConfig().getBoolean("dropStack.hologram.enable")) {
+        if (!ConfigUtil.getConfig().getBoolean("drop-stack.hologram.enable")) {
             return;
         }
-        if (ConfigUtil.getConfig().getString("dropStack.hologram.format") == null) {
+        if (ConfigUtil.getConfig().getString("drop-stack.hologram.format") == null) {
             return;
         }
 
@@ -34,7 +34,7 @@ public final class DropStackUtil {
 
         if (itemName == null) return;
 
-        String hologramText = Objects.requireNonNull(ConfigUtil.getConfig().getString("dropStack.hologram.format"))
+        String hologramText = Objects.requireNonNull(ConfigUtil.getConfig().getString("drop-stack.hologram.format"))
                 .replace("{name}", itemName)
                 .replace("{amount}", String.valueOf(stack.getAmount()));
 
@@ -57,7 +57,7 @@ public final class DropStackUtil {
         ItemStack itemStack = item.getItemStack();
         ItemStack nearbyItemStack = nearbyItem.getItemStack();
 
-        int maxStack = ConfigUtil.getConfig().getInt("dropStack.maxStack");
+        int maxStack = ConfigUtil.getConfig().getInt("drop-stack.maxStack");
         int combinedAmount = itemStack.getAmount() + nearbyItemStack.getAmount();
 
         if (maxStack > 0 && combinedAmount <= maxStack) {
@@ -78,7 +78,7 @@ public final class DropStackUtil {
     public static Item findNearbyItem(Item item) {
         ItemStack itemStack = item.getItemStack();
 
-        double range = ConfigUtil.getConfig().getDouble("dropStack.range");
+        double range = ConfigUtil.getConfig().getDouble("drop-stack.range");
         for (Entity entity : item.getNearbyEntities(range, range, range)) {
             if (entity.getType() != EntityUtil.DROPPED_ITEM) continue;
 
@@ -89,7 +89,7 @@ public final class DropStackUtil {
             if (nearbyItem.getPickupDelay() > 1000) continue;
             if (!nearbyItemStack.isSimilar(itemStack)) continue;
 
-            int maxStack = ConfigUtil.getConfig().getInt("dropStack.maxStack");
+            int maxStack = ConfigUtil.getConfig().getInt("drop-stack.maxStack");
             int combinedAmount = itemStack.getAmount() + nearbyItemStack.getAmount();
             if (combinedAmount >= maxStack) continue;
 

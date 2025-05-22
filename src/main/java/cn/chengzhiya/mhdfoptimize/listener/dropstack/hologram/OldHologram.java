@@ -14,11 +14,11 @@ public final class OldHologram implements Listener {
      */
     @EventHandler(ignoreCancelled = true)
     public void onPlayerPickupItem(PlayerPickupItemEvent event) {
-        if (!ConfigUtil.getConfig().getBoolean("dropStack.enable")) {
+        if (!ConfigUtil.getConfig().getBoolean("drop-stack.enable")) {
             return;
         }
 
-        if (!ConfigUtil.getConfig().getBoolean("dropStack.hologram.enable")) {
+        if (!ConfigUtil.getConfig().getBoolean("drop-stack.hologram.enable")) {
             return;
         }
 
@@ -31,10 +31,10 @@ public final class OldHologram implements Listener {
      */
     @EventHandler(ignoreCancelled = true)
     public void onInventoryPickupItem(InventoryPickupItemEvent event) {
-        if (!ConfigUtil.getConfig().getBoolean("dropStack.enable")) {
+        if (!ConfigUtil.getConfig().getBoolean("drop-stack.enable")) {
             return;
         }
-        if (!ConfigUtil.getConfig().getBoolean("dropStack.hologram.enable")) {
+        if (!ConfigUtil.getConfig().getBoolean("drop-stack.hologram.enable")) {
             return;
         }
 
