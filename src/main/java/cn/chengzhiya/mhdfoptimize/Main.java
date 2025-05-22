@@ -1,7 +1,7 @@
 package cn.chengzhiya.mhdfoptimize;
 
-import cn.ChengZhiYa.LangUtil.LangAPI;
-import cn.ChengZhiYa.LangUtil.manager.lang.LangManager;
+import cn.chengzhiya.langutil.LangAPI;
+import cn.chengzhiya.langutil.manager.lang.LangManager;
 import cn.chengzhiya.mhdfoptimize.commands.MHDFOptimize;
 import cn.chengzhiya.mhdfoptimize.commands.Trash;
 import cn.chengzhiya.mhdfoptimize.listener.EntityAi;
