@@ -231,13 +231,11 @@ public final class CleanUtil {
                         ),
                         (long) showTime
                 );
-                return;
-            }
-            if (type.equals("actionBar")) {
+            } else if (type.equals("actionBar")) {
                 ActionUtil.sendActionBar(player, message);
-                return;
+            } else {
+                player.sendMessage(ColorUtil.color(message));
             }
-            player.sendMessage(ColorUtil.color(message));
         }
     }
 

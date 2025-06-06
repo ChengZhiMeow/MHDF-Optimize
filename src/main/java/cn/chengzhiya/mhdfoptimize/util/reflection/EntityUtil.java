@@ -22,7 +22,9 @@ public final class EntityUtil {
     }
 
     /**
-     * @param entity 要控制 AI 的实体
+     * 调整指定实体的AI
+     *
+     * @param entity 实体实例
      */
     public static void controlEntityAI(LivingEntity entity, boolean enable) {
         if (VersionUtil.is1_9orAbove()) {
