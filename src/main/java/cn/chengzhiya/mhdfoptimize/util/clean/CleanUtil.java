@@ -5,7 +5,6 @@ import cn.chengzhiya.mhdfoptimize.util.action.ActionUtil;
 import cn.chengzhiya.mhdfoptimize.util.action.BossBarUtil;
 import cn.chengzhiya.mhdfoptimize.util.action.SoundUtil;
 import cn.chengzhiya.mhdfoptimize.util.config.ConfigUtil;
-import cn.chengzhiya.mhdfoptimize.util.message.ColorUtil;
 import cn.chengzhiya.mhdfoptimize.util.message.LogUtil;
 import cn.chengzhiya.mhdfoptimize.util.runnable.MHDFRunnable;
 import cn.chengzhiya.mhdfoptimize.util.scheduler.MHDFScheduler;
