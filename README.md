@@ -13,11 +13,11 @@ _✨轻量 便携 快捷 即装即用 可无前置运行✨_
 </div>
 
 <p align="center">
-    <a href="https://github.com/MHDFCraft/MHDF-Optimize/issues">
-        <img src="https://img.shields.io/github/issues/MHDFCraft/MHDF-Optimize?style=flat-square" alt="issues">
+    <a href="https://github.com/ChengZhiMeow/MHDF-Optimize/issues">
+        <img src="https://img.shields.io/github/issues/ChengZhiMeow/MHDF-Optimize?style=flat-square" alt="issues">
     </a>
-    <a href="https://github.com/MHDFCraft/MHDF-Optimize/blob/main/LICENSE">
-        <img src="https://img.shields.io/github/license/MHDFCraft/MHDF-Optimize?style=flat-square" alt="license">
+    <a href="https://github.com/ChengZhiMeow/MHDF-Optimize/blob/main/LICENSE">
+        <img src="https://img.shields.io/github/license/ChengZhiMeow/MHDF-Optimize?style=flat-square" alt="license">
     </a>
     <a href="https://qm.qq.com/cgi-bin/qm/qr?k=T047YB6lHNMMcMuVlK_hGBcT5HNESxMA&jump_from=webapi&authKey=0/IFGIO6xLjjHB2YKF7laLxkKWbtWbDhb1lt//m7GgbElJSWdRZ8RjbWzSsufkO6">
         <img src="https://img.shields.io/badge/QQ群-129139830-brightgreen?style=flat-square" alt="qq-group">
@@ -33,15 +33,15 @@ _✨轻量 便携 快捷 即装即用 可无前置运行✨_
 - [MythicMobs](https://mythiccraft.io/index.php?resources/mythicmobs.1)
 
 <div align="center">
-    <a href="https://github.com/MHDFCraft/MHDF-Optimize/pulse">
+    <a href="https://github.com/ChengZhiMeow/MHDF-Optimize/pulse">
         <img src="https://repobeats.axiom.co/api/embed/e58f3e1358766291db33ba451d3e90be99811f4f.svg" alt="pulse">
     </a>
 </div>
 
 ## 贡献者
 
-<a href="https://github.com/MHDFCraft/MHDF-Optimize/graphs/contributors">
-  <img src="https://stg.contrib.rocks/image?repo=MHDFCraft/MHDF-Optimize" alt="contributors"/>
+<a href="https://github.com/ChengZhiMeow/MHDF-Optimize/graphs/contributors">
+  <img src="https://stg.contrib.rocks/image?repo=ChengZhiMeow/MHDF-Optimize" alt="contributors"/>
 </a>
 
 ## 精神支柱
@@ -50,7 +50,7 @@ _✨轻量 便携 快捷 即装即用 可无前置运行✨_
 
 ## Star
 
-[![Stargazers over time](https://starchart.cc/MHDFCraft/MHDF-Optimize.svg?variant=adaptive)](https://starchart.cc/MHDFCraft/MHDF-Optimize)
+[![Stargazers over time](https://starchart.cc/ChengZhiMeow/MHDF-Optimize.svg?variant=adaptive)](https://starchart.cc/ChengZhiMeow/MHDF-Optimize)
 
 ## 友链
 
