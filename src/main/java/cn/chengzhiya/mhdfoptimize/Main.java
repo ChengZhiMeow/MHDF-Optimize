@@ -34,6 +34,8 @@ import java.util.Objects;
 public final class Main extends JavaPlugin {
     public static Main instance;
 
+    private boolean nativeSupportAdventureApi;
+
     private LangManager langManager;
     private PluginHookManager pluginHookManager;
     private AdventureManager adventureManager;
@@ -41,6 +43,13 @@ public final class Main extends JavaPlugin {
     @Override
     public void onLoad() {
         instance = this;
+
+        try {
+            Class.forName("net.kyori.adventure.text.Component");
+            this.nativeSupportAdventureApi = true;
+        } catch (Exception e) {
+            this.nativeSupportAdventureApi = false;
+        }
     }
 
     @Override

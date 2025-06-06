@@ -134,9 +134,14 @@ public final class ActionUtil {
      * @param message 消息
      */
     public static void sendActionBar(Player player, String message) {
-        MHDFScheduler.getAsyncScheduler().runNow(Main.instance, task ->
+        MHDFScheduler.getAsyncScheduler().runNow(Main.instance, task -> {
+            if (Main.instance.isNativeSupportAdventureApi()) {
+                player.sendActionBar(ColorUtil.color(message));
+            } else {
                 Main.instance.getAdventureManager().getAdventure()
-                        .player(player).sendActionBar(ColorUtil.color(message)));
+                        .player(player).sendActionBar(ColorUtil.color(message));
+            }
+        });
     }
 
     /**
@@ -146,9 +151,14 @@ public final class ActionUtil {
      * @param bossBar BOSS血条实例
      */
     public static void sendBossbar(Player player, BossBar bossBar) {
-        MHDFScheduler.getAsyncScheduler().runNow(Main.instance, task ->
+        MHDFScheduler.getAsyncScheduler().runNow(Main.instance, task -> {
+            if (Main.instance.isNativeSupportAdventureApi()) {
+                player.showBossBar(bossBar);
+            } else {
                 Main.instance.getAdventureManager().getAdventure()
-                        .player(player).showBossBar(bossBar));
+                        .player(player).showBossBar(bossBar);
+            }
+        });
     }
 
     /**
@@ -158,9 +168,14 @@ public final class ActionUtil {
      * @param bossBar BOSS血条实例
      */
     public static void hideBossbar(Player player, BossBar bossBar) {
-        MHDFScheduler.getAsyncScheduler().runNow(Main.instance, task ->
+        MHDFScheduler.getAsyncScheduler().runNow(Main.instance, task -> {
+            if (Main.instance.isNativeSupportAdventureApi()) {
+                player.hideBossBar(bossBar);
+            } else {
                 Main.instance.getAdventureManager().getAdventure()
-                        .player(player).hideBossBar(bossBar));
+                        .player(player).hideBossBar(bossBar);
+            }
+        });
     }
 
     /**
