@@ -234,7 +234,7 @@ public final class CleanUtil {
             } else if (type.equals("actionBar")) {
                 ActionUtil.sendActionBar(player, message);
             } else {
-                player.sendMessage(ColorUtil.color(message));
+                ActionUtil.sendMessage(player, message);
             }
         }
     }
