@@ -72,7 +72,7 @@ public final class CleanUtil {
                         return;
                     }
 
-                    boolean inList = entityList.contains(entity.getType().getName());
+                    boolean inList = entityList.contains(entity.getType().name());
                     boolean shouldKeep = (blacklistMode && !inList) || (!blacklistMode && inList);
                     if (shouldKeep) {
                         return;
@@ -136,7 +136,7 @@ public final class CleanUtil {
                         }
                     }
 
-                    boolean inList = itemList.contains(entity.getType().getName());
+                    boolean inList = itemList.contains(itemStack.getType().name());
                     boolean shouldKeep = (blacklistMode && !inList) || (!blacklistMode && inList);
                     if (shouldKeep) {
                         return;
